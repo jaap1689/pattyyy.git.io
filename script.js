@@ -8,30 +8,30 @@ function actualizarHora() {
 
     // Mensajes motivacionales para cada hora del día
     const mensajes = [
-        "🌅 ¡Buenos días! Hoy será un día increíble. 🌞",
-        "🌙 La noche avanza, respira profundo y relájate. 💫",
-        "🌌 Un poco de descanso hace maravillas. ¡Duerme bien! 😴",
-        "🌠 La madrugada es mágica, sueños bonitos para ti. ✨",
-        "💭 ¿Estás despierto? Quizás una idea genial esté por llegar. 🤔",
-        "🌞 ¡El amanecer se acerca! Hoy será un gran día. ☀️",
-        "🌄 Nuevo día, nuevas oportunidades. ¡Vamos por todo! 🚀",
-        "🍀 Que la suerte y la alegría te acompañen hoy. 🍀",
-        "💡 Enfócate en tus metas, cada paso cuenta. 🏆",
-        "🚀 ¡Tú puedes con todo! Sigue adelante sin miedo. 💪",
-        "🎯 Recuerda, el esfuerzo de hoy será la recompensa de mañana. 🔥",
-        "💛 ¡Mediodía! Haz una pausa, respira y sigue brillando. 🌞",
-        "🥗 ¡Hora de almorzar! Recarga energías y sigue con ánimo. 🍽️",
-        "🕶️ Una pequeña siesta o descanso te hará bien. 😎",
-        "📖 Aprende algo nuevo hoy. ¡Siempre hay algo por descubrir! 🔎",
-        "☕ Tómate un café y sigue con fuerza. ¡Lo estás haciendo genial! ☕",
-        "🎵 Pon tu música favorita y disfruta el momento. 🎶",
-        "🎯 ¡Terminando el día! Asegúrate de cerrar con broche de oro. ✨",
-        "👏 ¡Felicidades! Diste lo mejor de ti hoy. Relájate y sonríe. 😊",
-        "🎉 ¡Un gran esfuerzo merece un gran descanso! Desconéctate un poco. 🍃",
-        "🌙 La noche llega y con ella la paz. ¡Descansa, te lo mereces! 😌",
-        "🍵 Disfruta un té o un chocolate caliente, te lo ganaste. ☕💖",
-        "🎬 Un buen momento para ver una película o leer algo interesante. 🎥",
-        "💤 Hora de dormir pronto, tu cuerpo y mente lo agradecerán. 🛌",
+        "🌅 ¡Buenos días! Hoy será un día increíble. 🌞", // 00:00 AM
+        "🌙 La noche avanza, respira profundo y relájate. 💫", // 01:00 AM
+        "🌌 Un poco de descanso hace maravillas. ¡Duerme bien! 😴", // 02:00 AM
+        "🌠 La madrugada es mágica, sueños bonitos para ti. ✨", // 03:00 AM
+        "💭 ¿Estás despierto? Quizás una idea genial esté por llegar. 🤔", // 04:00 AM
+        "🌞 ¡El amanecer se acerca! Hoy será un gran día. ☀️", // 05:00 AM
+        "🌄 Nuevo día, nuevas oportunidades. ¡Vamos por todo! 🚀", // 06:00 AM
+        "🍀 Que la suerte y la alegría te acompañen hoy. 🍀", // 07:00 AM
+        "💡 Enfócate en tus metas, cada paso cuenta. 🏆", // 08:00 AM
+        "🚀 ¡Tú puedes con todo! Sigue adelante sin miedo. 💪", // 09:00 AM
+        "🎯 Recuerda, el esfuerzo de hoy será la recompensa de mañana. 🔥", // 10:00 AM
+        "💛 ¡Mediodía! Haz una pausa, respira y sigue brillando. 🌞", // 11:00 AM
+        "🥗 ¡Hora de almorzar! Recarga energías y sigue con ánimo. 🍽️", // 12:00 PM
+        "🕶️ Una pequeña siesta o descanso te hará bien. 😎", // 13:00 PM
+        "📖 Aprende algo nuevo hoy. ¡Siempre hay algo por descubrir! 🔎", // 14:00 PM
+        "☕ Tómate una taza café y sigue con fuerza. ¡Lo estás haciendo genial amorchita linda! ☕", // 15:00 PM
+        "🎵 Pon tu música favorita y disfruta el momento, baila, rie. 🎶", // 16:00 PM
+        "🎯 ¡Terminando el día! Asegúrate de cerrar con broche de oro y salir a tu hora =). ✨", // 17:00 PM (Desde aquí empieza el tono de felicitaciones)
+        "👏 ¡Felicidades amorchita! Diste lo mejor de ti hoy. Relájate y sonríe. 😊", // 18:00 PM
+        "🎉 ¡Un gran esfuerzo merece un gran descanso! Desconéctate un poco, nada de tik tok, solo descansa. 🍃", // 19:00 PM
+        "🌙 La noche llega y con ella la paz. ¡Descansa, te lo mereces mi amor! 😌", // 20:00 PM
+        "🍵 Disfruta un té o un chocolate caliente, te lo ganaste, o una buena copa de vino. ☕💖", // 21:00 PM
+        "🎬 Un buen momento para ver una película o leer algo interesante. 🎥", // 22:00 PM
+        "💤 Hora de dormir pronto, tu cuerpo y mente lo agradecerán, buenas noches amor mio. 🛌", // 23:00 PM
     ];
 
     // Mostrar mensaje según la hora actual
