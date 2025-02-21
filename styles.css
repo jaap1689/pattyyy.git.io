@@ -1,26 +1,139 @@
+/* 🌈 Fondo animado con degradado de colores */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #ffdde1, #ff80ab);
+    background-size: 400% 400%;
+    animation: moverFondo 12s infinite alternate ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
-    background-color: #f4f4f4;
     margin: 0;
-}
-
-.container {
+    overflow: hidden;
     text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
+/* 🎨 Animación del fondo */
+@keyframes moverFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-p {
+/* ✨ Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* 🕰️ Hora con efecto digital */
+.hora {
+    font-family: 'Courier New', monospace;
+    font-size: 3em;
+    color: #ff4081;
+    background: linear-gradient(90deg, #ff00ff, #ff4081, #ff1493, #ff80ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 15px rgba(255, 20, 147, 0.8);
+    font-weight: bold;
+    letter-spacing: 4px;
+    animation: brilloHora 1s infinite alternate;
+}
+
+/* ✨ Efecto de brillo en la hora */
+@keyframes brilloHora {
+    0% { text-shadow: 0px 0px 10px rgba(255, 20, 147, 0.8); }
+    100% { text-shadow: 0px 0px 20px rgba(255, 20, 147, 1); }
+}
+
+/* 📜 Mensaje especial */
+.mensaje {
     font-size: 1.5em;
-    color: #555;
+    color: #6a1b9a;
+    font-style: italic;
+    font-weight: bold;
+    animation: fadeInMessage 2s ease-in-out;
+}
+
+/* 📸 Contenedor de imágenes */
+#photo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* 📸 Estilos de las fotos circulares */
+.photo-shape {
+    position: absolute;
+    width: 220px; /* Ajustado para mejor visibilidad */
+    height: 220px;
+    border-radius: 50%; /* Hace que todas sean circulares */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInOut 7s ease-in-out forwards;
+}
+
+/* 📷 Ajuste para que la imagen ocupe toda la forma sin dejar espacios ni cortarse mal */
+.photo-shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el círculo sin dejar bordes */
+    border-radius: 50%;
+    transform: scale(1.2); /* Ajuste fino para que cubra bien el círculo */
+    background-color: transparent; /* Elimina cualquier fondo de color */
+    padding: 0; /* Elimina el espacio interno para evitar bordes extraños */
+}
+
+
+/* ✨ Efecto de aparición y desaparición tenue */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.8); }
+    20% { opacity: 1; transform: scale(1); }
+    80% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.2); }
+}
+
+/* ❤️ Animación de corazones cayendo */
+.heart {
+    position: fixed;
+    top: -10vh;
+    font-size: 20px;
+    opacity: 0.8;
+    color: red;
+    animation: caer 4s linear infinite;
+}
+
+/* ✨ Animación de corazones cayendo */
+@keyframes caer {
+    0% { transform: translateY(-10vh) scale(1); opacity: 1; }
+    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+}
+
+/* 🌟 Estilos Responsivos */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    .hora {
+        font-size: 2em;
+    }
+    .photo-shape {
+        width: 180px;
+        height: 180px;
+    }
 }
